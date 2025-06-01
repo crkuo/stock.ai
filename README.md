@@ -1,69 +1,61 @@
-# 股票 AI 推薦系統 Dashboard
+# 📊 Stock AI Recommendation Dashboard
 
-本專案為一個結合 Graph Neural Network 與推薦系統的股票 AI Dashboard，目的是提供每日與未來區間的推薦股票，並以圖像化與資料視覺化方式呈現。
-
----
-
-## 📌 專案目標
-
-* 對每一支股票建立 Graph Node 表示（GNN）
-* 利用鄰接股票的價格變動進行推理推薦
-* 提供投資人或一般使用者每日可參考的股票清單
-* 提供推薦解釋與歷史績效查詢
+本專案旨在建立一個股票 AI 推薦系統的 Dashboard，整合 Graph Neural Network 模型的推論結果、推薦理由與視覺化圖表，並具備互動性與可擴充性，供履歷展示與投資參考使用。
 
 ---
 
-## ✅ 已完成內容
+## ✅ 專案進度摘要
 
-### 1. 網站結構
-
-* [V] SPA 應用架構（React + Vite + Ant Design v5）
-* [V] 設計全站路由與側邊導覽列
-* [x] 使用 Tailwind + AntD v5 token 實現主色 `#00bcc2`
-
-### 2. 頁面結構
-
-* [V] `/recommend`：今日推薦清單，含推薦理由、信心指數與可視化
-* [x] `/model`：展示模型訓練紀錄、Log、Hyperparam 與版本
-* [x] `/watchlist`：使用者收藏追蹤清單
-* [x] `/graph`：完整股票圖（GNN）視覺化呈現
-* [x] `MiniGraph` 模組化：可內嵌或以 Modal 互動展示推薦來源節點
-
-### 3. 可視化模組
-
-* [x] 使用 `react-force-graph` 動態繪製 GNN 節點關係圖
-* [x] 可縮放、拖曳與 Tooltip（label）互動
-* [x] 導入 `ResizeObserver` 支援自動寬高調適
+* [x] 專案頁面結構規劃完成
+* [x] 路由與導覽列架構完成
+* [x] 主色調設定為 `#00bcc2`（Ant Design v5 + Vite）
+* [x] Recommendation Mini Graph 模組完成，支援 Modal 與 inline 顯示，並自適應寬高
+* [x] 推薦頁 (`/recommend`) 基礎畫面與資料結構設計完成
+* [x] Watchlist 頁面 (`/watchlist`) 設計確認
+* [x] Graph 可視化頁 (`/graph`) 確認使用 force graph
+* [x] 導入 RWD 設計慣例，統一寬度以適應容器大小
+* [ ] `/history/:stockId` 頁面待開發（個股推薦歷史、MiniGraph 顯示）
+* [ ] `/watchlist` 收藏功能尚未實作（需資料儲存設計）
+* [ ] `/backtest` 回測分析頁面尚未開發（含策略回測與報酬視覺化）
+* [ ] `/model` 頁面部分功能（Log 顯示與圖表視覺化）尚未整合
+* [ ] `/graph` 圖形頁面初版完成，但互動功能需優化（zoom/pan/tooltip）
+* [ ] 模型部署推論 API 串接中（資料格式與模型結果結構尚未最終確認）
+* [ ] 用戶自訂偏好（產業類別、自選股）功能待討論
+* [ ] 後端 API 結構與推論結果格式待確認
 
 ---
 
-## 🚧 開發中
+## 📁 頁面功能列表與狀態
 
-### `/history/:stockId` 頁面（個股歷史推薦與績效分析）
-
-* [ ] 顯示基本資訊（名稱、代碼、產業）
-* [ ] 折線圖顯示歷史股價與 AI 推薦時間點
-* [ ] 過去推薦紀錄列表（含信心值）
-* [ ] 每筆推薦紀錄可展開 MiniGraph 顯示來源節點
-
----
-
-## 🔜 接下來的規劃
-
-* [ ] 收藏機制（使用者可加入 watchlist）
-* [ ] 搜尋功能（依名稱或代碼快速篩選）
-* [ ] 後端 API 串接與資料快取
-* [ ] 支援 Responsive Design
+| 頁面                  | 說明                   | 討論完成 | 已實作     |
+| ------------------- | -------------------- | ---- | ------- |
+| `/recommend`        | 顯示每日推薦股票，包含信心指數與推薦圖  | ✅    | 🔄 部分完成 |
+| `/watchlist`        | 顯示使用者收藏股票與最近推薦紀錄     | ✅    | ⏳ 未實作   |
+| `/history/:stockId` | 顯示個股歷史走勢、推薦紀錄、推薦來源圖  | ✅    | ⏳ 待開發   |
+| `/backtest`         | 未來加入模型回測分析介面         | ❌    | ⏳ 尚未開始  |
+| `/model`            | 顯示模型訓練資訊、訓練 log、效能圖表 | ✅    | 🔄 部分完成 |
+| `/graph`            | 顯示整體股票圖結構與推薦邊緣權重     | ✅    | ✅ 初步完成  |
 
 ---
 
-## 📦 技術棧
+## 🔧 技術棧與套件
 
-* Frontend: `React`, `Vite`, `TypeScript`
-* UI: `Ant Design v5`, `TailwindCSS`
-* Chart: `Recharts`, `react-force-graph`
-* Style: CSS-in-JS + ConfigProvider token
+* 前端：React 18 + Vite
+* UI 套件：Ant Design v5（採用 CSS-in-JS 與 Token 主題系統）
+* 圖表：Recharts（歷史價格）、react-force-graph（推薦來源圖）
+* 資料來源：每日更新 TWSE 股價與模型推薦結果
+* 預期後端：FastAPI + GNN 模型服務（尚未接入）
 
 ---
 
-如需貢獻、測試或部署協助，歡迎隨時聯繫開發者 🙌
+## ✅ 待辦事項（按優先順序）
+
+1. [ ] 完成 `/history/:stockId` 頁面，顯示推薦歷史與影響來源圖
+2. [ ] 實作「加入收藏」功能並同步於 watchlist
+3. [ ] 串接推論 API 並設計對應資料格式與快取策略
+4. [ ] 將 force-graph 圖做進一步互動優化（縮放、hover 細節）
+5. [ ] 若時間充裕，新增登入系統與使用者偏好設定（例如產業偏好）
+
+---
+
+> 本 README 將持續隨開發進度更新，若有設計與結構變更，請同步修改本說明。
