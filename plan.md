@@ -189,7 +189,7 @@ TrainingManager:
 
 ### Phase 2: Graph Construction Framework (Weeks 3-4)
 - [x] Implement correlation-based graph builder
-- [ ] Add Granger causality computation
+- [x] Add Granger causality computation
 - [ ] Create dynamic graph update mechanisms
 - [ ] Build graph visualization tools
 - [ ] Implement graph pruning and thresholding
