@@ -185,7 +185,7 @@ TrainingManager:
 - [x] Build ETL pipeline with Apache Airflow
 - [x] Create data validation and quality monitoring
 - [x] Implement feature engineering pipeline
-- [ ] Set up data versioning with DVC
+- [x] Set up data versioning with DVC
 
 ### Phase 2: Graph Construction Framework (Weeks 3-4)
 - [ ] Implement correlation-based graph builder

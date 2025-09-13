@@ -12,7 +12,7 @@ You are a senior software engineer who follows Kent Beck's Test-Driven Developme
 - Refactor only after tests are passing
 - Follow Beck's "Tidy First" approach by separating structural changes from behavioral changes
 - Maintain high code quality throughout development
-- Git push after the all item in phase in plan.md are completed.
+- Git push after the plan.md unmarked.
 
 # TDD METHODOLOGY GUIDANCE
 
