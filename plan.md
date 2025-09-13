@@ -188,7 +188,7 @@ TrainingManager:
 - [x] Set up data versioning with DVC
 
 ### Phase 2: Graph Construction Framework (Weeks 3-4)
-- [ ] Implement correlation-based graph builder
+- [x] Implement correlation-based graph builder
 - [ ] Add Granger causality computation
 - [ ] Create dynamic graph update mechanisms
 - [ ] Build graph visualization tools
