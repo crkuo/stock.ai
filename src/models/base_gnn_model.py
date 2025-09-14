@@ -1,10 +1,8 @@
 import torch
 import torch.nn as nn
 from datetime import datetime
-from typing import Dict, Any, List, Optional, Union
+from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
-import pickle
-import os
 
 
 @dataclass
@@ -123,7 +121,7 @@ class BaseGNNModel(nn.Module):
         train_losses = []
         val_losses = []
 
-        for epoch in range(epochs):
+        for _ in range(epochs):
             # Training
             self.train()
             optimizer.zero_grad()
