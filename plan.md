@@ -191,13 +191,16 @@ TrainingManager:
 - [x] Implement correlation-based graph builder
 - [x] Add Granger causality computation
 - [x] Create dynamic graph update mechanisms
-- [ ] Build graph visualization tools
+- [x] Build graph visualization tools
 - [ ] Implement graph pruning and thresholding
 - [ ] Add graph persistence and versioning
 
 ### Phase 3: GNN Model Development (Weeks 5-6)
 - [ ] Implement basic GCN model with PyTorch Geometric
-- [ ] Add GraphSAGE implementation for scalability
+- [ ] Add GraphSAGE implementation for scalability (inductive learning)
+- [ ] Implement inductive learning framework for new nodes
+- [ ] Add partial model update mechanisms for targeted retraining
+- [ ] Create cluster-based update system for sectoral changes
 - [ ] Create temporal encoding mechanisms
 - [ ] Implement attention-based architectures
 - [ ] Add model checkpointing and versioning
@@ -207,6 +210,9 @@ TrainingManager:
 - [ ] Implement Granger causality testing suite
 - [ ] Add transfer entropy calculations
 - [ ] Create multi-horizon prediction framework
+- [ ] Add inductive vs transductive learning router
+- [ ] Implement incremental training pipeline for short-term updates
+- [ ] Create transductive learning pipeline for long-term updates
 - [ ] Implement ensemble methods
 - [ ] Add uncertainty quantification
 - [ ] Build backtesting framework
@@ -215,8 +221,12 @@ TrainingManager:
 - [ ] Hyperparameter optimization with Optuna
 - [ ] Model compression and quantization
 - [ ] Implement real-time inference pipeline
+- [ ] Add model update management system
+- [ ] Implement A/B testing framework for model versions
+- [ ] Add model rollback and version control mechanisms
+- [ ] Create update timing and scheduling system
 - [ ] Add monitoring and alerting systems
-- [ ] Create REST API with FastAPI
+- [ ] Create REST API with FastAPI (including update endpoints)
 - [ ] Set up Docker containerization
 
 ## Technical Stack Details
