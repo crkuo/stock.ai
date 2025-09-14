@@ -203,8 +203,7 @@ TrainingManager:
 ### Phase 3: GNN Model Development (Weeks 5-6)
 - [x] Design and implement base GNN model interface
 - [x] Create transductive and inductive model interfaces
-- [ ] Implement hybrid model interface for dual-paradigm support
-- [ ] Create model registry and factory system
+- [x] Create model registry and factory system
 - [ ] Implement model plugin architecture with learning type separation
 - [ ] Add model configuration management system
 - [ ] Implement basic GCN transductive model with PyTorch Geometric
