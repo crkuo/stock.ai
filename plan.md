@@ -9,6 +9,11 @@ Develop a Graph Neural Network (GNN) based stock analysis system to identify cau
 - Build dynamic stock relationship graphs with strength indicators
 - Implement GCN and GraphSAGE models for temporal prediction
 - Quantify influence propagation through stock networks
+- Support periodic model updates with inductive and transductive learning
+- Enable short-term updates for new stocks and key events
+- Provide long-term comprehensive model retraining capabilities
+- Design modular, replaceable model architecture for easy swapping
+- Implement plugin-based system for extending model capabilities
 
 ## Detailed Technical Architecture
 
@@ -192,21 +197,32 @@ TrainingManager:
 - [x] Add Granger causality computation
 - [x] Create dynamic graph update mechanisms
 - [x] Build graph visualization tools
-- [ ] Implement graph pruning and thresholding
+- [x] Implement graph pruning and thresholding
 - [ ] Add graph persistence and versioning
 
 ### Phase 3: GNN Model Development (Weeks 5-6)
-- [ ] Implement basic GCN model with PyTorch Geometric
-- [ ] Add GraphSAGE implementation for scalability (inductive learning)
+- [ ] Design and implement base GNN model interface
+- [ ] Create transductive and inductive model interfaces
+- [ ] Implement hybrid model interface for dual-paradigm support
+- [ ] Create model registry and factory system
+- [ ] Implement model plugin architecture with learning type separation
+- [ ] Add model configuration management system
+- [ ] Implement basic GCN transductive model with PyTorch Geometric
+- [ ] Add GraphSAGE inductive implementation for scalability
+- [ ] Create model adapter layer for legacy compatibility
 - [ ] Implement inductive learning framework for new nodes
 - [ ] Add partial model update mechanisms for targeted retraining
 - [ ] Create cluster-based update system for sectoral changes
 - [ ] Create temporal encoding mechanisms
-- [ ] Implement attention-based architectures
+- [ ] Implement attention-based architectures (GAT)
+- [ ] Add hot-swapping capabilities for live model replacement
 - [ ] Add model checkpointing and versioning
 - [ ] Create model evaluation framework
 
 ### Phase 4: Causality and Prediction System (Weeks 7-8)
+- [ ] Implement A/B testing framework for model comparison
+- [ ] Add model performance monitoring and auto-switching
+- [ ] Create model rollback mechanisms
 - [ ] Implement Granger causality testing suite
 - [ ] Add transfer entropy calculations
 - [ ] Create multi-horizon prediction framework
@@ -218,6 +234,9 @@ TrainingManager:
 - [ ] Build backtesting framework
 
 ### Phase 5: Optimization and Production (Weeks 9-10)
+- [ ] Add model deployment pipeline with zero-downtime switching
+- [ ] Implement model canary deployments
+- [ ] Add automated model selection based on performance metrics*
 - [ ] Hyperparameter optimization with Optuna
 - [ ] Model compression and quantization
 - [ ] Implement real-time inference pipeline
